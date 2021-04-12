@@ -1,0 +1,71 @@
+
+
+.r1{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: rgb(126, 139, 173);
+}
+.r2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: rgb(202, 145, 118);
+  flex-direction: row-reverse;
+  h2{
+    font-weight: 900;
+  }
+  p{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 25px;
+  }
+}
+#potrait{
+  margin-left: 2rem;
+  width: max(25%, 350px);
+}
+#chatbox{
+  position: relative;
+  #bubble{
+    width: 100%;
+  }
+  b{
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    left: min(15%, 70px);
+    font-size: max(1.2rem, 15px);
+    font-family: 'Patrick Hand', cursive;
+  }
+}
+
+#nextBtn{
+  height: 40px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: rgb(190, 160, 60);
+  i{
+    font-size: 40px;
+  }
+  @keyframes colorChange {
+    0% {color: rgb(221, 107, 92);}
+    50% {color: rgb(92, 221, 167);}
+    75% {color: rgb(92, 116, 221)}
+    100% {color: rgb(190, 160, 60);}
+  }
+  :hover{
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+}
+
+#texas{
+  padding: 2%;
+}
+
