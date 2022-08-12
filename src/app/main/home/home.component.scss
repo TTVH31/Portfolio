@@ -36,7 +36,7 @@
     width: 60%;
     top: 10%;
     left: min(15%, 70px);
-    font-size: max(1.2rem, 15px);
+    font-size: min(1.1rem, max(15px, 1rem));
     font-family: 'Patrick Hand', cursive;
   }
 }

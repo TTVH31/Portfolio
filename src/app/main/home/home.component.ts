@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { fromEvent, Observable } from 'rxjs';
 import { fadeIn, slideRight } from '../common/animation/animation';
 
 @Component({
@@ -10,18 +11,25 @@ import { fadeIn, slideRight } from '../common/animation/animation';
     fadeIn
   ]
 })
+
 export class HomeComponent implements OnInit {
+
   dialog = [
     'Hello there, click the next button to start!',
-    'My name is Thanh, I am a Front-End developer.',
+    'My name is Thanh, I am a Software Engineer, expertise in Web Development, at FINRA Inc.',
     'I graduated from University of North Texas with a degree of Computer Infomation System.',
-    'The website will have more information about me. And feel free to leave any comment.',
+    'The platform is created to share knowledge and ideas.',
     'Have Fun!'
   ]
   i = 0;
+  element = document.querySelector<HTMLElement>('div');
+  //@ts-ignore
+  sroll$: Observable<Event> = fromEvent(this.element, 'scroll')
   constructor() { }
 
   ngOnInit(): void {
+    this.sroll$.subscribe(console.log);
+
   }
 
   talk(){
@@ -30,5 +38,4 @@ export class HomeComponent implements OnInit {
     }
     else this.i=0;
   }
-
 }
